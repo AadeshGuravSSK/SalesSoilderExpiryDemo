@@ -1,0 +1,29 @@
+{
+    "metadata": {
+        "version": "1.0",
+        "last_updated": "2025-06-24T19:20:40.458994",
+        "total_devices": 1,
+        "active_devices": 1
+    },
+    "devices": [
+        {
+            "device_id": "app_android_U1TLS34.115-",
+            "platform_id": "google_user_hint",
+            "ip_address": "103.226.146.90",
+            "mac_address": "10.42.0.1",
+            "platform": "android",
+            "device_model": "motorola motorola edge 40",
+            "os_version": "Android 14",
+            "app_version": "1.0.0",
+            "app_build": "1",
+            "first_registered": "2025-06-24T19:09:24.038461",
+            "last_seen": "2025-06-24T19:20:40.458777",
+            "strikes": 0,
+            "status": "active",
+            "location": {
+                "country": "India",
+                "region": "Maharashtra"
+            }
+        }
+    ]
+}

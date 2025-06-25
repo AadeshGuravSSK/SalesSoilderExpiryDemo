@@ -1,0 +1,37 @@
+{
+  "_template_info": {
+    "description": "Template for security incident reports",
+    "version": "1.0",
+    "incident_types": [
+      "time_manipulation",
+      "suspicious_activity",
+      "unauthorized_access"
+    ]
+  },
+  "incident_id": "inc_timestamp",
+  "device_id": "app_platform_devicehash",
+  "timestamp": "2024-12-19T10:00:00Z",
+  "incident_type": "time_manipulation",
+  "severity": "low|medium|high|critical",
+  "details": {
+    "device_time": "2024-12-19T10:00:00Z",
+    "server_time": "2024-12-19T10:00:00Z",
+    "drift_minutes": 0,
+    "drift_hours": 0,
+    "strike_number": 1,
+    "activity_description": "Description of suspicious activity"
+  },
+  "device_info": {
+    "platform_id": "unique_platform_identifier",
+    "ip_address": "xxx.xxx.xxx.xxx",
+    "mac_address": "xx:xx:xx:xx:xx:xx",
+    "platform": "android|ios|windows|macos|linux",
+    "device_model": "Device Model Name",
+    "app_version": "1.0.0"
+  },
+  "response": {
+    "action_taken": "strike_added|device_blocked|warning_issued",
+    "automated": true,
+    "follow_up_required": false
+  }
+}

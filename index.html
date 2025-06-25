@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Soldier Dashboard</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div id="app">
+        <header class="header">
+            <div class="brand">
+                <i class="fas fa-shield-alt"></i>
+                <h1>Sales Soldier</h1>
+            </div>
+            <div class="status">
+                <span id="systemStatus">System Active</span>
+                <span id="licenseExpiry">License: Dec 31, 2025</span>
+            </div>
+        </header>
+        
+        <nav class="navigation">
+            <button class="nav-btn active" data-tab="overview">Overview</button>
+            <button class="nav-btn" data-tab="devices">Devices</button>
+            <button class="nav-btn" data-tab="security">Security</button>
+            <button class="nav-btn" data-tab="analytics">Analytics</button>
+        </nav>
+        
+        <main class="main">
+            <section id="overview" class="tab-content active">
+                <div class="metrics">
+                    <div class="metric-card">
+                        <h3 id="totalDevices">0</h3>
+                        <p>Total Devices</p>
+                    </div>
+                    <div class="metric-card">
+                        <h3 id="activeDevices">0</h3>
+                        <p>Active</p>
+                    </div>
+                    <div class="metric-card">
+                        <h3 id="blockedDevices">0</h3>
+                        <p>Blocked</p>
+                    </div>
+                    <div class="metric-card">
+                        <h3 id="incidents">0</h3>
+                        <p>Incidents</p>
+                    </div>
+                </div>
+                <div class="charts">
+                    <div class="chart-container">
+                        <canvas id="statusChart"></canvas>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="devices" class="tab-content">
+                <h2>Device Management</h2>
+                <div id="devicesList"></div>
+            </section>
+            
+            <section id="security" class="tab-content">
+                <h2>Security Monitoring</h2>
+                <div id="securityContent"></div>
+            </section>
+            
+            <section id="analytics" class="tab-content">
+                <h2>Usage Analytics</h2>
+                <div id="analyticsContent"></div>
+            </section>
+        </main>
+    </div>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

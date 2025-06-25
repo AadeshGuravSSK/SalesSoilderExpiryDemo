@@ -1,0 +1,26 @@
+{
+  "version": "1.0",
+  "last_updated": "2025-06-24T18:20:00Z",
+  "expiration_date": "2025-12-31T23:59:59Z",
+  "is_active": true,
+  "grace_period_days": 7,
+  "message": "Your Sales Soldier license has expired. Please contact support to renew your subscription.",
+  "features": {
+    "allow_offline_mode": false,
+    "force_update": false,
+    "maintenance_mode": false,
+    "max_devices": 50,
+    "offline_mode_days": 30,
+    "security_monitoring": true,
+    "analytics_enabled": true
+  },
+  "contact_info": {
+    "support_email": "dev.malekar@sskinnov.com",
+    "website": "https://sskinnov.com",
+    "phone": "+91-8329483554"
+  },
+  "maintenance": {
+    "next_scheduled": "2025-12-31T02:00:00Z",
+    "estimated_downtime_minutes": 15
+  }
+}

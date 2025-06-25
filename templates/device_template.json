@@ -1,0 +1,34 @@
+{
+  "_template_info": {
+    "description": "Template for new device registration",
+    "version": "1.0",
+    "required_fields": [
+      "device_id",
+      "platform_id",
+      "platform",
+      "first_registered"
+    ]
+  },
+  "device_id": "app_platform_devicehash",
+  "platform_id": "unique_platform_identifier",
+  "ip_address": "xxx.xxx.xxx.xxx",
+  "mac_address": "xx:xx:xx:xx:xx:xx",
+  "platform": "android|ios|windows|macos|linux",
+  "device_model": "Device Model Name",
+  "os_version": "OS Version",
+  "app_version": "1.0.0",
+  "app_build": "100",
+  "first_registered": "2024-12-19T10:00:00Z",
+  "last_seen": "2024-12-19T10:00:00Z",
+  "strikes": 0,
+  "status": "active|blocked|suspended",
+  "location": {
+    "country": "Country Name",
+    "region": "Region/State"
+  },
+  "security_flags": {
+    "time_manipulation_detected": false,
+    "suspicious_activity": false,
+    "multiple_ips": false
+  }
+}
