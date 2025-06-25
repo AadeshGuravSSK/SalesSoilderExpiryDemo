@@ -1,7 +1,7 @@
 {
     "metadata": {
         "version": "1.0",
-        "last_updated": "2025-06-25T11:54:58.790858",
+        "last_updated": "2025-06-25T11:55:00.257311",
         "total_devices": 5,
         "active_devices": 5
     },
@@ -93,7 +93,7 @@
             "app_version": "1.0.0",
             "app_build": "1",
             "first_registered": "2025-06-25T11:54:32.250229",
-            "last_seen": "2025-06-25T11:54:58.790827",
+            "last_seen": "2025-06-25T11:55:00.257275",
             "strikes": 0,
             "status": "active",
             "location": {
