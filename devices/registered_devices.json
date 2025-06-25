@@ -1,9 +1,9 @@
 {
     "metadata": {
         "version": "1.0",
-        "last_updated": "2025-06-25T11:26:35.219596",
-        "total_devices": 2,
-        "active_devices": 2
+        "last_updated": "2025-06-25T11:38:04.002956",
+        "total_devices": 3,
+        "active_devices": 3
     },
     "devices": [
         {
@@ -37,6 +37,25 @@
             "app_build": "1",
             "first_registered": "2025-06-24T21:00:43.846200",
             "last_seen": "2025-06-24T21:00:51.351779",
+            "strikes": 0,
+            "status": "active",
+            "location": {
+                "country": "Unknown",
+                "region": "Unknown"
+            }
+        },
+        {
+            "device_id": "app_android_PPR1.180610.",
+            "platform_id": "google_user_hint",
+            "ip_address": "106.193.113.88",
+            "mac_address": "0.0.0.0",
+            "platform": "android",
+            "device_model": "xiaomi Redmi 6",
+            "os_version": "Android 9",
+            "app_version": "1.0.0",
+            "app_build": "1",
+            "first_registered": "2025-06-25T11:38:04.002796",
+            "last_seen": "2025-06-25T11:38:04.002861",
             "strikes": 0,
             "status": "active",
             "location": {
