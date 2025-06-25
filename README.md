@@ -43,7 +43,7 @@ python3 -m http.server 8000
 ### 🌐 GitHub Pages
 
 The dashboard is also available on GitHub Pages at:
-https://SSKINNOVATORS.github.io/SalesSoldierExpiry
+https://AadeshGuravSSK.github.io/SalesSoilderExpiryDemo
 
 ## Security Features
 
