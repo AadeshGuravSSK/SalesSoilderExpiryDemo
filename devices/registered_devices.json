@@ -1,9 +1,9 @@
 {
     "metadata": {
         "version": "1.0",
-        "last_updated": "2025-06-25T11:38:34.420203",
-        "total_devices": 3,
-        "active_devices": 3
+        "last_updated": "2025-06-25T11:52:50.835278",
+        "total_devices": 4,
+        "active_devices": 4
     },
     "devices": [
         {
@@ -56,6 +56,25 @@
             "app_build": "1",
             "first_registered": "2025-06-25T11:38:04.002796",
             "last_seen": "2025-06-25T11:38:34.420137",
+            "strikes": 0,
+            "status": "active",
+            "location": {
+                "country": "Unknown",
+                "region": "Unknown"
+            }
+        },
+        {
+            "device_id": "app_android_TP1A.220624.",
+            "platform_id": "google_user_hint",
+            "ip_address": "152.59.12.67",
+            "mac_address": "unknown",
+            "platform": "android",
+            "device_model": "samsung SM-A326B",
+            "os_version": "Android 13",
+            "app_version": "1.0.0",
+            "app_build": "1",
+            "first_registered": "2025-06-25T11:52:50.835181",
+            "last_seen": "2025-06-25T11:52:50.835200",
             "strikes": 0,
             "status": "active",
             "location": {
