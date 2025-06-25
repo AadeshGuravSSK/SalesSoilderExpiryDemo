@@ -24,6 +24,25 @@
                 "country": "India",
                 "region": "Maharashtra"
             }
+        },
+        {
+            "device_id": "app_android_UP1A.231005.",
+            "platform_id": "google_user_hint",
+            "ip_address": "152.58.17.105",
+            "mac_address": "192.168.31.1",
+            "platform": "android",
+            "device_model": "TECNO TECNO CK6",
+            "os_version": "Android 14",
+            "app_version": "1.0.0",
+            "app_build": "1",
+            "first_registered": "2025-06-24T21:00:43.846200",
+            "last_seen": "2025-06-24T21:00:51.351779",
+            "strikes": 0,
+            "status": "active",
+            "location": {
+                "country": "Unknown",
+                "region": "Unknown"
+            }
         }
     ]
 }
