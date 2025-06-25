@@ -27,23 +27,34 @@ class SalesSoldierDashboard {
   // Data Loading
   async loadData() {
     try {
-      // Load each file individually with error handling
-      const config = await fetch("./expiry_config.json")
+      // Add cache busting timestamp to prevent GitHub Pages caching issues
+      const cacheBuster = `?t=${Date.now()}`;
+
+      // Load each file individually with error handling and cache busting
+      const config = await fetch(`./expiry_config.json${cacheBuster}`)
         .then((r) => r.json())
         .catch(() => null);
-      const devices = await fetch("./devices/registered_devices.json")
+      const devices = await fetch(
+        `./devices/registered_devices.json${cacheBuster}`
+      )
         .then((r) => r.json())
         .catch(() => null);
-      const blocked = await fetch("./devices/blocked_devices.json")
+      const blocked = await fetch(
+        `./devices/blocked_devices.json${cacheBuster}`
+      )
         .then((r) => r.json())
         .catch(() => null);
-      const incidents = await fetch("./devices/security_incidents.json")
+      const incidents = await fetch(
+        `./devices/security_incidents.json${cacheBuster}`
+      )
         .then((r) => r.json())
         .catch(() => null);
-      const daily = await fetch("./analytics/daily_stats.json")
+      const daily = await fetch(`./analytics/daily_stats.json${cacheBuster}`)
         .then((r) => r.json())
         .catch(() => null);
-      const geo = await fetch("./analytics/geo_stats.json")
+      const geo = await fetch(
+        `./analytics/geographic_distribution.json${cacheBuster}`
+      )
         .then((r) => r.json())
         .catch(() => null);
 
@@ -54,6 +65,18 @@ class SalesSoldierDashboard {
       console.log("Config:", config);
       console.log("Devices:", devices);
       console.log("Blocked:", blocked);
+      console.log("Geographic:", geo);
+
+      // Show data freshness indicator
+      const lastUpdated =
+        config?.last_updated || devices?.metadata?.last_updated;
+      if (lastUpdated) {
+        console.log(`Data last updated: ${lastUpdated}`);
+        this.showDataFreshness(lastUpdated);
+      }
+
+      // Validate data consistency
+      this.validateDataConsistency();
     } catch (error) {
       console.error("Error loading data:", error);
       this.showError("Failed to load dashboard data");
@@ -120,16 +143,31 @@ class SalesSoldierDashboard {
   }
 
   updateMetrics() {
-    const totalDevices = this.data.devices?.metadata?.total_devices || 0;
-    const activeDevices = this.data.devices?.metadata?.active_devices || 0;
-    const blockedDevices = this.data.blocked?.metadata?.total_blocked || 0;
-    const totalIncidents = this.data.incidents?.metadata?.total_incidents || 0;
+    // Count actual devices instead of relying on potentially stale metadata
+    const devices = this.data.devices?.devices || [];
+    const totalDevices = devices.length;
+    const activeDevices = devices.filter((d) => d.status === "active").length;
 
-    console.log("Updating metrics:", {
+    // For blocked devices, also count from actual data
+    const blockedDevicesFromDevices = devices.filter(
+      (d) => d.status === "blocked"
+    ).length;
+    const blockedDevicesFromFile = this.data.blocked?.devices?.length || 0;
+    const blockedDevices = Math.max(
+      blockedDevicesFromDevices,
+      blockedDevicesFromFile
+    );
+
+    // Count actual incidents
+    const totalIncidents = this.data.incidents?.incidents?.length || 0;
+
+    console.log("Updating metrics (corrected):", {
       totalDevices,
       activeDevices,
       blockedDevices,
       totalIncidents,
+      devicesArrayLength: devices.length,
+      metadataTotal: this.data.devices?.metadata?.total_devices,
     });
 
     this.animateCounter("totalDevices", totalDevices);
@@ -172,9 +210,13 @@ class SalesSoldierDashboard {
       this.charts.statusChart.destroy();
     }
 
-    const totalDevices = this.data.devices?.metadata?.total_devices || 0;
-    const activeDevices = this.data.devices?.metadata?.active_devices || 0;
-    const blockedDevices = this.data.blocked?.metadata?.total_blocked || 0;
+    // Use actual device counts for chart consistency
+    const devices = this.data.devices?.devices || [];
+    const totalDevices = devices.length;
+    const activeDevices = devices.filter(d => d.status === 'active').length;
+    const blockedDevicesFromDevices = devices.filter(d => d.status === 'blocked').length;
+    const blockedDevicesFromFile = this.data.blocked?.devices?.length || 0;
+    const blockedDevices = Math.max(blockedDevicesFromDevices, blockedDevicesFromFile);
     const suspendedDevices = Math.max(
       0,
       totalDevices - activeDevices - blockedDevices
@@ -397,6 +439,104 @@ class SalesSoldierDashboard {
   showError(message) {
     console.error(message);
     // You could show a toast notification here
+  }
+
+  // Data Validation
+  validateDataConsistency() {
+    const devices = this.data.devices?.devices || [];
+    const metadataTotal = this.data.devices?.metadata?.total_devices || 0;
+    const metadataActive = this.data.devices?.metadata?.active_devices || 0;
+    const actualTotal = devices.length;
+    const actualActive = devices.filter(d => d.status === 'active').length;
+    
+    if (metadataTotal !== actualTotal || metadataActive !== actualActive) {
+      console.warn('⚠️ Data inconsistency detected:', {
+        metadataTotal,
+        actualTotal,
+        metadataActive,
+        actualActive,
+        message: 'Metadata counts do not match actual device array. Using actual counts.'
+      });
+      
+      // Show warning indicator
+      this.showDataWarning('Data inconsistency detected - using actual device counts');
+    }
+  }
+  
+  showDataWarning(message) {
+    const warningIndicator = document.createElement('div');
+    warningIndicator.style.cssText = `
+      position: fixed;
+      top: 50px;
+      right: 10px;
+      background: rgba(255, 152, 0, 0.9);
+      color: white;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      z-index: 1000;
+      font-family: Inter, sans-serif;
+      font-weight: 500;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      max-width: 300px;
+    `;
+    warningIndicator.textContent = `⚠️ ${message}`;
+    
+    document.body.appendChild(warningIndicator);
+    
+    setTimeout(() => {
+      warningIndicator.style.opacity = '0';
+      setTimeout(() => warningIndicator.remove(), 300);
+    }, 8000);
+  }
+
+  // Data Freshness Indicator
+  showDataFreshness(lastUpdated) {
+    const freshnessIndicator = document.createElement("div");
+    freshnessIndicator.id = "data-freshness";
+    freshnessIndicator.style.cssText = `
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background: rgba(78, 205, 196, 0.9);
+      color: white;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      z-index: 1000;
+      transition: opacity 0.3s;
+      font-family: Inter, sans-serif;
+      font-weight: 500;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    `;
+
+    const updateTime = new Date(lastUpdated);
+    const now = new Date();
+    const diffMinutes = Math.floor((now - updateTime) / (1000 * 60));
+
+    if (diffMinutes < 1) {
+      freshnessIndicator.textContent = "🟢 Data: Just updated";
+      freshnessIndicator.style.background = "rgba(78, 205, 196, 0.9)";
+    } else if (diffMinutes < 60) {
+      freshnessIndicator.textContent = `🟡 Data: ${diffMinutes}m ago`;
+      freshnessIndicator.style.background = "rgba(255, 230, 109, 0.9)";
+    } else {
+      const diffHours = Math.floor(diffMinutes / 60);
+      freshnessIndicator.textContent = `🔴 Data: ${diffHours}h ago`;
+      freshnessIndicator.style.background = "rgba(255, 107, 107, 0.9)";
+    }
+
+    // Remove existing indicator
+    const existing = document.getElementById("data-freshness");
+    if (existing) existing.remove();
+
+    document.body.appendChild(freshnessIndicator);
+
+    // Auto-hide after 5 seconds
+    setTimeout(() => {
+      freshnessIndicator.style.opacity = "0";
+      setTimeout(() => freshnessIndicator.remove(), 300);
+    }, 5000);
   }
 
   // Auto-refresh
