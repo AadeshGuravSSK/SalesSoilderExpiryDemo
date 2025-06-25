@@ -1,9 +1,9 @@
 {
     "metadata": {
         "version": "1.0",
-        "last_updated": "2025-06-25T11:54:22.516972",
-        "total_devices": 4,
-        "active_devices": 4
+        "last_updated": "2025-06-25T11:54:32.250338",
+        "total_devices": 5,
+        "active_devices": 5
     },
     "devices": [
         {
@@ -75,6 +75,25 @@
             "app_build": "1",
             "first_registered": "2025-06-25T11:52:50.835181",
             "last_seen": "2025-06-25T11:53:02.027723",
+            "strikes": 0,
+            "status": "active",
+            "location": {
+                "country": "Unknown",
+                "region": "Unknown"
+            }
+        },
+        {
+            "device_id": "app_android_T2SRS33.72-2",
+            "platform_id": "google_user_hint",
+            "ip_address": "152.59.12.132",
+            "mac_address": "unknown",
+            "platform": "android",
+            "device_model": "motorola moto g52",
+            "os_version": "Android 13",
+            "app_version": "1.0.0",
+            "app_build": "1",
+            "first_registered": "2025-06-25T11:54:32.250229",
+            "last_seen": "2025-06-25T11:54:32.250270",
             "strikes": 0,
             "status": "active",
             "location": {
