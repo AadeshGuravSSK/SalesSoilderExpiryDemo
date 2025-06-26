@@ -1,21 +1,19 @@
 {
     "metadata": {
         "version": "1.0",
-        "last_updated": "2025-06-25T11:55:09.783948",
+        "last_updated": "2025-06-26T15:03:59.123379",
         "privacy_mode": true
     },
     "geographic_distribution": {
         "countries": {
-            "India": 1,
-            "Unknown": 4
+            "Unknown": 5
         },
         "regions": {
-            "India - Maharashtra": 1,
-            "Unknown - Unknown": 4
+            "Unknown - Unknown": 5
         },
         "summary": {
-            "total_countries": 1,
-            "most_active_country": "India",
+            "total_countries": 0,
+            "most_active_country": null,
             "device_concentration": "distributed"
         }
     }
