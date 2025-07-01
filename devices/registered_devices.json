@@ -1,7 +1,7 @@
 {
     "metadata": {
         "version": "1.0",
-        "last_updated": "2025-07-01T14:58:35.407711",
+        "last_updated": "2025-07-01T15:04:00.488289",
         "total_devices": 5,
         "active_devices": 5
     },
@@ -47,7 +47,7 @@
         {
             "device_id": "app_android_PPR1.180610.",
             "platform_id": "google_user_hint",
-            "ip_address": "106.193.113.88",
+            "ip_address": "106.210.214.214",
             "mac_address": "0.0.0.0",
             "platform": "android",
             "device_model": "xiaomi Redmi 6",
@@ -55,7 +55,7 @@
             "app_version": "1.0.0",
             "app_build": "1",
             "first_registered": "2025-06-25T11:38:04.002796",
-            "last_seen": "2025-06-25T11:38:34.420137",
+            "last_seen": "2025-07-01T15:03:58.928520",
             "strikes": 0,
             "status": "active",
             "location": {
