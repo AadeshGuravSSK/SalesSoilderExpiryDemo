@@ -1,7 +1,7 @@
 {
     "metadata": {
         "version": "1.0",
-        "last_updated": "2025-06-30T13:40:26.831379",
+        "last_updated": "2025-07-01T14:58:29.947942",
         "total_devices": 5,
         "active_devices": 5
     },
@@ -66,7 +66,7 @@
         {
             "device_id": "app_android_TP1A.220624.",
             "platform_id": "google_user_hint",
-            "ip_address": "152.59.12.67",
+            "ip_address": "103.221.251.220",
             "mac_address": "unknown",
             "platform": "android",
             "device_model": "samsung SM-A326B",
@@ -74,7 +74,7 @@
             "app_version": "1.0.0",
             "app_build": "1",
             "first_registered": "2025-06-25T11:52:50.835181",
-            "last_seen": "2025-06-25T11:53:02.027723",
+            "last_seen": "2025-07-01T14:58:29.470453",
             "strikes": 0,
             "status": "active",
             "location": {
