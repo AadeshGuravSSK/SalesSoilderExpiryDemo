@@ -1,20 +1,20 @@
 {
     "metadata": {
         "version": "1.0",
-        "last_updated": "2025-07-04T15:57:15.365192",
+        "last_updated": "2025-07-04T20:50:48.827740",
         "retention_days": 90
     },
     "daily_stats": [
         {
             "date": "2025-07-04",
-            "total_devices": 5,
-            "active_devices": 1,
-            "new_registrations": 0,
+            "total_devices": 6,
+            "active_devices": 2,
+            "new_registrations": 1,
             "unique_countries": 0,
             "platform_distribution": {
-                "android": 5
+                "android": 6
             },
-            "timestamp": "2025-07-04T15:57:15.362772"
+            "timestamp": "2025-07-04T20:50:48.826455"
         },
         {
             "date": "2025-07-03",
