@@ -1,9 +1,9 @@
 {
     "metadata": {
         "version": "1.0",
-        "last_updated": "2025-07-04T15:57:12.635028",
-        "total_devices": 5,
-        "active_devices": 5
+        "last_updated": "2025-07-04T20:50:46.966804",
+        "total_devices": 6,
+        "active_devices": 6
     },
     "devices": [
         {
@@ -94,6 +94,25 @@
             "app_build": "1",
             "first_registered": "2025-06-25T11:54:32.250229",
             "last_seen": "2025-06-25T11:55:06.514984",
+            "strikes": 0,
+            "status": "active",
+            "location": {
+                "country": "Unknown",
+                "region": "Unknown"
+            }
+        },
+        {
+            "device_id": "app_android_V1TL35.73-60",
+            "platform_id": "google_user_hint",
+            "ip_address": "152.58.17.57",
+            "mac_address": "192.168.31.1",
+            "platform": "android",
+            "device_model": "motorola motorola edge 40",
+            "os_version": "Android 15",
+            "app_version": "1.0.0",
+            "app_build": "1",
+            "first_registered": "2025-07-04T20:50:46.965717",
+            "last_seen": "2025-07-04T20:50:46.965773",
             "strikes": 0,
             "status": "active",
             "location": {
