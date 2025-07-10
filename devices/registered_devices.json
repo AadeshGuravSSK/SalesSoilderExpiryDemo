@@ -1,9 +1,9 @@
 {
     "metadata": {
         "version": "1.0",
-        "last_updated": "2025-07-05T06:50:36.685953",
-        "total_devices": 6,
-        "active_devices": 6
+        "last_updated": "2025-07-10T09:12:07.521467",
+        "total_devices": 7,
+        "active_devices": 7
     },
     "devices": [
         {
@@ -113,6 +113,25 @@
             "app_build": "1",
             "first_registered": "2025-07-04T20:50:46.965717",
             "last_seen": "2025-07-05T06:50:36.685901",
+            "strikes": 0,
+            "status": "active",
+            "location": {
+                "country": "Unknown",
+                "region": "Unknown"
+            }
+        },
+        {
+            "device_id": "app_android_SP1A.210812.",
+            "platform_id": "google_user_hint",
+            "ip_address": "106.220.188.171",
+            "mac_address": "unknown",
+            "platform": "android",
+            "device_model": "samsung SM-M215F",
+            "os_version": "Android 12",
+            "app_version": "1.0.0",
+            "app_build": "1",
+            "first_registered": "2025-07-10T09:12:07.521070",
+            "last_seen": "2025-07-10T09:12:07.521163",
             "strikes": 0,
             "status": "active",
             "location": {
