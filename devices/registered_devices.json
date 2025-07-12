@@ -1,9 +1,9 @@
 {
     "metadata": {
         "version": "1.0",
-        "last_updated": "2025-07-10T16:56:47.818987",
-        "total_devices": 7,
-        "active_devices": 7
+        "last_updated": "2025-07-12T22:14:36.677107",
+        "total_devices": 8,
+        "active_devices": 8
     },
     "devices": [
         {
@@ -132,6 +132,25 @@
             "app_build": "1",
             "first_registered": "2025-07-10T09:12:07.521070",
             "last_seen": "2025-07-10T09:12:14.916267",
+            "strikes": 0,
+            "status": "active",
+            "location": {
+                "country": "Unknown",
+                "region": "Unknown"
+            }
+        },
+        {
+            "device_id": "app_android_AP3A.240617.",
+            "platform_id": "google_user_hint",
+            "ip_address": "49.36.101.181",
+            "mac_address": "192.168.29.1",
+            "platform": "android",
+            "device_model": "OnePlus CPH2415",
+            "os_version": "Android 15",
+            "app_version": "1.0.0",
+            "app_build": "1",
+            "first_registered": "2025-07-12T22:14:36.677067",
+            "last_seen": "2025-07-12T22:14:36.677078",
             "strikes": 0,
             "status": "active",
             "location": {
