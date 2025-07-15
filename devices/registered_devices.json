@@ -1,7 +1,7 @@
 {
     "metadata": {
         "version": "1.0",
-        "last_updated": "2025-07-15T15:39:43.508710",
+        "last_updated": "2025-07-15T16:56:19.667338",
         "total_devices": 9,
         "active_devices": 9
     },
@@ -28,7 +28,7 @@
         {
             "device_id": "app_android_UP1A.231005.",
             "platform_id": "google_user_hint",
-            "ip_address": "106.220.135.21",
+            "ip_address": "103.226.146.32",
             "mac_address": "192.168.31.1",
             "platform": "android",
             "device_model": "TECNO TECNO CK6",
@@ -36,7 +36,7 @@
             "app_version": "1.0.0",
             "app_build": "1",
             "first_registered": "2025-06-24T21:00:43.846200",
-            "last_seen": "2025-06-25T11:54:22.516948",
+            "last_seen": "2025-07-15T16:56:19.112337",
             "strikes": 0,
             "status": "active",
             "location": {
