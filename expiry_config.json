@@ -1,7 +1,7 @@
 {
   "version": "1.0",
   "last_updated": "2025-06-24T18:20:00Z",
-  "expiration_date": "2025-12-31T23:59:59Z",
+  "expiration_date": "2027-12-31T23:59:59Z",
   "is_active": true,
   "grace_period_days": 7,
   "message": "Your Sales Soldier license has expired. Please contact support to renew your subscription.",
